@@ -123,7 +123,7 @@ module Kitchen
           #  #{update_packages_debian_cmd}
           #  #{sudo('apt-get')} -y install ansible#{ansible_debian_version}
             #{sudo('apt-get')} -y install software-properties-common
-            #{sudo('add-apt-repository')} #{ansible_apt_repo}
+            #{sudo('add-apt-repository')} -y #{ansible_apt_repo}
             #{sudo('apt-get')} update
             #{sudo('apt-get')} -y install ansible
 
