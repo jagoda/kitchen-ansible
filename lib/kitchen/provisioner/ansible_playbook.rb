@@ -239,7 +239,7 @@ module Kitchen
             "-M #{File.join(config[:root_path], 'modules')}",
             ansible_verbose_flag,
             extra_vars,
-            "#{File.join(config[:root_path], config[:playbook])}",
+            "#{File.join(config[:root_path], File.basename(config[:playbook]))}",
           ].join(" ")
         end
 
