@@ -379,6 +379,7 @@ module Kitchen
           info('Preparing playbook')
           debug("Using playbook from #{playbook}")
           dest = File.join(sandbox_path, playbook)
+          debug("Copying playbook to #{dest}")
           FileUtils.mkdir_p(File.dirname(dest))
           FileUtils.cp_r(File.basename(playbook), dest)
         end
